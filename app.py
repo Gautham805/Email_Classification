@@ -4,7 +4,7 @@ import re
 from PIL import Image
 
 # Load models and vectorizer
-nb_model = joblib.load(r"C:\Users\gauth\Downloads\email classifier\naive_bayes_Gmail_Classifier.pkl")
+nb_model = joblib.load("naive_bayes_Gmail_Classifier.pkl")
 lr_model = joblib.load(r"C:\Users\gauth\Downloads\email classifier\logistic_Gmail_Classifier.pkl")
 vectorizer = joblib.load(r"C:\Users\gauth\Downloads\email classifier\tfidf_vectorizer.pkl")
 
