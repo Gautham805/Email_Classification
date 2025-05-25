@@ -4,9 +4,19 @@ import re
 from PIL import Image
 
 # Load models and vectorizer
-nb_model = joblib.load("naive_bayes_Gmail_Classifier.pkl")
-lr_model = joblib.load(r"logistic_Gmail_Classifier.pkl")
-vectorizer = joblib.load(r"tfidf_vectorizer.pkl")
+import os
+
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+nb_model_path = os.path.join(BASE_DIR, "naive_bayes_Gmail_Classifier.pkl")
+lr_model_path = os.path.join(BASE_DIR, "logistic_Gmail_Classifier.pkl")
+vectorizer_path = os.path.join(BASE_DIR, "tfidf_vectorizer.pkl")
+
+nb_model = joblib.load(nb_model_path)
+lr_model = joblib.load(lr_model_path)
+vectorizer = joblib.load(vectorizer_path)
+
 
 # Set page config
 st.set_page_config(page_title="Spam Detector", page_icon="📧", layout="centered")
