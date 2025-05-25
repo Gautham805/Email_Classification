@@ -5,8 +5,8 @@ from PIL import Image
 
 # Load models and vectorizer
 nb_model = joblib.load("naive_bayes_Gmail_Classifier.pkl")
-lr_model = joblib.load(r"C:\Users\gauth\Downloads\email classifier\logistic_Gmail_Classifier.pkl")
-vectorizer = joblib.load(r"C:\Users\gauth\Downloads\email classifier\tfidf_vectorizer.pkl")
+lr_model = joblib.load(r"logistic_Gmail_Classifier.pkl")
+vectorizer = joblib.load(r"tfidf_vectorizer.pkl")
 
 # Set page config
 st.set_page_config(page_title="Spam Detector", page_icon="📧", layout="centered")
